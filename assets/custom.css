@@ -96,4 +96,3 @@
     width: calc(16.8% - .8rem); /* decrease percentage and it will increase items */
   }
 }
-.footer {display: none;}
