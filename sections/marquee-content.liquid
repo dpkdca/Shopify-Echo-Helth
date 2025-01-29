@@ -1,0 +1,291 @@
+<style>
+  @media screen and (max-width: 900px) {
+  .text-with-icons__blocks.has-3-per-row .text-with-icons__block {
+    width: 30%;
+    margin: 8px;
+  }
+}
+.swiper.mySwipernew:hover button.play-button {
+    display: block !important;
+}
+.play-button {
+  display:none;
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+  .swiper.mySwipernew.swiper-initialized.swiper-horizontal{
+    font-size: 20px;
+    font-weight: 700;
+    color: #214068;
+    background-color:white;
+    padding:10px 0;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+   
+  }
+.db-ticker-inside.db-disabled {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+  .swiper-wrapper {
+    align-items: center;
+  }
+  .swiper-slide img {
+    width: 35% !important;
+}
+</style>
+  
+  <div class="swiper mySwipernew">  
+   <div class="swiper-wrapper page-width">
+     {% for block in section.blocks %}
+     <div class="swiper-slide" >
+	<div class="db-ticker-block">
+		<div class="db-ticker-inside db-disabled">
+		<img src="{{ block.settings.image | img_url: 'master' }}">
+        
+          
+		<div class="label">
+            <h3>{{ block.settings.title }}</h3>
+          </div>          
+          <div class="tex-with-icons_text">
+            {{ block.settings.text }}
+          </div>
+			<div class="link-icon"></div>
+		</div><!-- .db-ticker-inside -->
+     </div>		
+	</div>
+{% endfor %}
+
+
+{% comment %}
+     
+    <div class="swiper-slide" >
+	<div class="db-ticker-block">
+		<div class="db-ticker-inside db-disabled">
+		<img src="https://cdn.shopify.com/s/files/1/0327/8897/1656/files/made-in-usa.jpg?v=1657489443" alt="">
+		<div class="label">90 day money back guarantee</div>
+			<div class="link-icon"></div>
+		</div><!-- .db-ticker-inside -->
+     </div>		
+	</div>
+	<div class="swiper-slide "><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0327/8897/1656/files/secure-shopping.jpg?v=1657487780" alt="">
+                    <div class="label">Doctor Formulated</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+	<div class="swiper-slide" ><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0327/8897/1656/files/shippping.png?v=1657479532" alt="">
+                    <div class="label">Doctor Formulated</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+	<div class="swiper-slide" ><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0656/0212/6049/files/sustainably-sourced.jpg?v=1715638705" alt="">
+                    <div class="label">Doctor Formulated</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+			<div class="swiper-slide" ><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0656/0212/6049/files/vet.jpg?v=1715637475" alt="">
+                    <div class="label">Doctor Formulated</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+			<div class="swiper-slide"><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0656/0212/6049/files/tested.jpg?v=1715638705" alt="">
+                    <div class="label">Good Manufacturing Practices certified</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+			<div class="swiper-slide"><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0327/8897/1656/files/money-back.jpg?v=1657487585" alt="">
+                    <div class="label">Money-Back Guarantee</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+			<div class="swiper-slide" ><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                <img src="https://cdn.shopify.com/s/files/1/0327/8897/1656/files/made-in-usa.jpg?v=1657489443" alt="">
+                <div class="label">From globally sourced ingredients</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+			<div class="swiper-slide"><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0327/8897/1656/files/secure-shopping.jpg?v=1657487780" alt="">
+                    <div class="label">Secure Shopping</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+			<div class="swiper-slide"><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0327/8897/1656/files/shippping.png?v=1657479532" alt="">
+                    <div class="label">Free shipping <span>on all orders</span></div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+			<div class="swiper-slide"><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0656/0212/6049/files/sustainably-sourced.jpg?v=1715638705" alt="">
+                    <div class="label">Sustainably-sourced</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+			<div class="swiper-slide"><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0656/0212/6049/files/vet.jpg?v=1715637475" alt="">
+                    <div class="label">Vet-formulated</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+			<div class="swiper-slide"><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0656/0212/6049/files/tested.jpg?v=1715638705" alt="">
+                    <div class="label">3rd party Tested</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+			<div class="swiper-slide"><div class="db-ticker-block">
+                <div class="db-ticker-inside db-disabled">
+                    <img src="https://cdn.shopify.com/s/files/1/0327/8897/1656/files/money-back.jpg?v=1657487585" alt="">
+                    <div class="label">Money-Back Guarantee</div>
+                    <div class="link-icon"></div>
+                </div><!-- .db-ticker-inside -->
+            </div></div>
+
+     {% endcomment %}
+			</div>
+    <!--<div class="swiper-pagination"></div>
+	<div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>-->
+  <!-- Play/Pause Button -->
+<button class="play-button" style="position: absolute; top: 10px; right: 10px;">
+  Pause
+</button>
+  </div>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+
+
+
+<script>
+  var swiper = new Swiper(".mySwipernew", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true, // Enable looping for infinite scrolling
+    autoplay: {
+      delay: -10, // Delay is 0 for continuous scrolling
+      disableOnInteraction: false, // Don't stop autoplay on interaction
+      speed: 5000, // Speed of scrolling
+    },
+    speed: 4000, // Adjust speed for the sliding effect
+    /*pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },*/
+	// Disable navigation and pagination
+    pagination: false, 
+    navigation: false, 
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      1440: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      }
+    }
+  });
+
+  // Play/Pause functionality
+  var isPlaying = true;
+  var playButton = document.querySelector(".play-button");
+
+  playButton.addEventListener("click", function () {
+    if (isPlaying) {
+      swiper.autoplay.stop(); // Stop autoplay
+      playButton.textContent = "Play"; // Change button text to "Play"
+    } else {
+      swiper.autoplay.start(); // Start autoplay
+      playButton.textContent = "Pause"; // Change button text to "Pause"
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // Pause the autoplay on click
+  document.querySelector('.swiper').addEventListener('click', function () {
+    swiper.autoplay.stop(); // Stop autoplay on click
+    playButton.textContent = "Play"; // Show Play button
+    isPlaying = false;
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "Marquee Content",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Text Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Add the Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Add The Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee Content",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

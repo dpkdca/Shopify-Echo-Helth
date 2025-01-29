@@ -1,0 +1,302 @@
+ <style>
+    .db-sec-why-row {
+    display: flex;
+    /* position: absolute; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    color: #214068;
+    /* background-color: white; */
+    font-family: Work Sans, sans-serif;
+    padding: 35px 0;
+}
+   .db-col-title.db-desktoponly {
+    POSITION: ABSOLUTE;
+ }
+
+.db-sec-why-col.db-sec-why-col-bullets {
+    padding-left: 18px;
+}
+.db-sec-why-col.db-sec-why-col-image {
+    width: 188%;
+   
+}
+::marker {
+    font-size: xxx-large;
+}
+
+li.scroll-slide {
+    padding: 0px 49px 0 20px;;
+}
+h3.db-col-title.db-desktoponly {
+    font-weight: 800;
+    font-size: calc(26px + 1vw);
+}
+li.scroll-slide.db-not-inview:after {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    top: 182px;
+    left: 521px;
+    display: block;
+    width: 21px;
+    height: 78%;
+    border-radius: 0;
+    border-right: 1px dashed #214068;
+    transition: 0.2s height;
+}
+.db-glue-sticky {
+    position: sticky;
+    top:70px;
+}
+   .db-sec-why-row .db-glue-sticky {
+    padding: 2.1rem 10rem;
+}
+.db-col-bullets.db-desktoponly .scroll-container li.scroll-slide h3 {
+    text-align: left !important;
+    font-size: 28px;
+    margin: 0;
+    color: #214068;
+}
+   
+   @media only screen and (max-width: 768px) {
+.db-sec-why-row.page-width {
+    display: block;
+}
+  .db-sec-why-col.db-sec-why-col-image {
+    width: auto;
+}
+  .db-col-title.db-desktoponly {
+    position: relative;
+    text-align:center;
+  }
+.db-sec-why-col.db-sec-why-col-bullets li.scroll-slide {
+    padding: 0;
+}
+.db-sec-why-col.db-sec-why-col-bullets {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.db-sec-why-col.db-sec-why-col-bullets ul.scroll-wrapper {
+    list-style: none;
+    margin: 0;
+}
+.db-col-bullets.db-desktoponly li.scroll-slide h3 {
+    font-size: 22px;
+}
+.db-col-bullets.db-desktoponly li.scroll-slide p {
+    font-size: 18px;
+} 
+.db-sec-why-row .db-glue-sticky {
+    padding: 10px;
+    border-radius: 10px;
+}
+.db-col-bullets.db-desktoponly {
+   padding: 18px;
+   min-width: 75%;
+}
+.db-col-bullets.db-desktoponly li.scroll-slide:before {
+     content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 90px;
+        background: #214068;
+        margin-bottom: 10px;
+}
+.db-col-bullets.db-desktoponly li.scroll-slide h3:before {
+    content: " ";
+    display: block;
+    width: 50%;
+    border-top: 2px dotted #214068;
+    margin-top: -20px;
+    margin-left: 13%;
+    padding-top: 25px;
+}
+     
+/* .db-col-bullets.db-desktoponly li.scroll-slide:after {
+        content: '';
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 20px;
+    height: 15%;
+    border-radius: 0;
+    border-right: 1px dashed #214068;
+    transition: .2s height;
+    margin-left: -50px;
+    margin-top: -130px;
+ } */
+}
+   .db-col-bullets.db-desktoponly .scroll-container li.scroll-slide h3 {
+    text-align: center;
+}
+   @media screen and (min-width:768px){
+.db-col-bullets.db-desktoponly li.scroll-slide:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 90px;
+    background: #214068;
+    position: absolute;
+    z-index: 2;
+      margin-left: -40px;
+    margin-top: 10px;
+}
+.db-col-bullets.db-desktoponly li.scroll-slide:after {
+        content: '';
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 20px;
+    height: 15%;
+    border-radius: 0;
+    border-right: 1px dashed #214068;
+    transition: .2s height;
+    margin-left: -50px;
+    margin-top: -130px;
+ }
+   }
+.db-sec-why-col.db-sec-why-col-bullets ul.scroll-wrapper {
+    list-style: none;
+    margin: 0;
+}
+
+.db-sec-why-col.db-sec-why-col-bullets .db-col-bullets.db-desktoponly {
+    padding-bottom: 25px;
+}
+   .db-glue-sticky img {
+    border: 0 none;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+   .db-sec-why-row.page-width {
+    background-color: #f3f3f3;
+}
+        </style>
+
+  <div class="db-sec-why-row page-width">  
+    <div class="db-col-title db-desktoponly">
+		<h2> {{ section.settings.heading }}</h2>
+    </div>
+   <div class="db-sec-why-col db-sec-why-col-image">
+     <div class="db-glue-sticky" >
+       <img src="{{ section.settings.image | img_url: 'master' }}" alt="Image">
+     </div>
+   </div>
+    
+	<div class="db-sec-why-col db-sec-why-col-bullets">
+		
+       
+          {% for block in section.blocks %}
+        <div class="db-col-bullets db-desktoponly">
+          <div class="scroll-container">
+            <ul class="scroll-wrapper">
+                <li class="scroll-slide">
+                    <h3>{{ block.settings.title }}</h3>
+                          <p>{{ block.settings.text }}</p>
+                </li>
+            </ul>
+          </div>
+        </div>
+            {% endfor %}
+        </div>
+    </div>
+  <!-- </div> -->
+  
+
+          
+    <!-- 
+        <div>
+        <div class="db-sec-why-row" >
+            <div class="db-sec-why-col db-sec-why-col-image">
+                <div class="db-glue-sticky">
+                    <img src="https://cdn.shopify.com/s/files/1/0656/0212/6049/files/Itch_Floating_Final.jpg?v=1716880724" alt="" style="width: 100%; height: 600px; object-fit: contain;">
+                </div>
+            </div>
+            
+            <div class="db-sec-why-col db-sec-why-col-bullets">
+                <h3 class="db-col-title db-desktoponly">Why PetScy</h3>
+                
+                <div class="db-col-bullets db-desktoponly">
+                <div class="scroll-container">
+                    <ul class="scroll-wrapper" l="">
+                        <li class="scroll-slide">
+                            <h2>Your beloved companion deserves better care </h2>
+                            While we make efforts to provide them with a nutritious diet, it's evident they require additional nutritional support, just like we do. Recognizing a growing concern for nutrient deficiencies among pets, the PetScy’s team realized the necessity for more comprehensive solutions.
+                        </li>
+                        <li class="scroll-slide db-not-inview">
+                            <h2>Effective Supplements for Your Pets </h2>
+                            Established in 2020, PetScy operates under a steadfast dedication to quality and efficacy. Our team invests years in the meticulous development, formulation, reformulation, and thorough testing of each product. This commitment ensures that you and your pets receive dependable, health-enhancing solutions.
+                        </li>
+                        <li class="scroll-slide db-not-inview">
+                            <h2>The Optimal Blend </h2>
+                            We integrate the best of Eastern and Western medicinal philosophies for comprehensive pet care. Recognizing the unique strengths of each approach, we synergize them to create a robust framework for enhancing your pet's well-being. Our commitment to preventive and therapeutic interventions is reflected in the carefully selected ingredients we use.
+                        </li>
+                        <li class="scroll-slide db-not-inview">
+                            <h2>Experience the Distinction </h2>
+                            Our supplements stand out for their exceptional efficacy. Unlike many pet supplements available today, which often provide minimal benefits and lack certifications or third-party testing, ours surpass expectations. We encourage you to scrutinize our label alongside others. You'll discover that we adhere to the highest standards, utilizing only the purest ingredients and precise dosages to truly enhance your pet's well-being.
+                        </li>
+                        <li class="scroll-slide db-not-inview">
+                            <h2>Transparency is key </h2>
+                            We believe our formulas are the best, but you don't have to take our word for it. Each batch is tested by an independent third-party lab to guarantee potency and purity. Transparency is essential to us, and we take great pride in the quality of our products.
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ -->
+
+
+ 
+{% schema %}
+{
+  "name": "scrollwrapper1",
+  "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Add the heading"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Image"
+        },
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Text Block",
+      "settings": [
+        
+        
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Add the Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Add The Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "scrollwrapper1",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

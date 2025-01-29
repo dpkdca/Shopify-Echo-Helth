@@ -1,0 +1,98 @@
+.header__icon .icon {
+    fill: currentColor !important;
+}
+.list-menu__item {
+    text-transform: uppercase;
+    color: #fff;
+}
+@media screen and (min-width: 990px) {
+    .header--middle-left {
+        grid-template-columns: auto auto auto !important;
+    }
+    .header__inline-menu {
+        display: block;
+        text-align: center;
+    }
+}
+.band:after {
+    content: "";
+    display: block;
+    background: #d9b659;
+    background-image: url(https://cdn.shopify.com/s/files/1/0712/4087/6261/files/gold-band.png?v=1728295225&width=360);
+    background-size: 130%;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 9px;
+}
+.band:empty {
+    display: block;
+}
+.announcement-bar__message {
+    text-transform: uppercase;
+}
+.collection__title.title-wrapper h2.title {
+    text-align: center;
+    color: #214068;
+}
+.card__content .card__information .card__heading {
+    font-size: 16px;
+}
+.price:not(.price--show-badge) .price-item--last:last-of-type {
+    color: red;
+    font-weight: 600;
+}
+.quick-add__submit, .multicolumn .button {
+    background-color: #5ba6ff;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+.quick-add__submit::after, .multicolumn .button::after {
+    box-shadow: 4 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgb(255 255 255), 0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));!i;!;
+}
+.multicolumn .title-wrapper-with-link h2.title.inline-richtext.h1 {
+    color: #214068;
+}
+.multicolumn .title-wrapper-with-link {
+    justify-content: center;
+}
+.multicolumn-list {
+    justify-content: center;
+}
+
+@media screen and (min-width: 750px) {
+    .background-none .multicolumn-card__image-wrapper {
+        margin-left: 6.5rem !important;
+        margin-right: 6.5rem !important;
+    }
+}
+.product__title h1 {
+    /* text-transform: uppercase; */
+    color: #214068;
+}
+
+
+@media only screen and (min-width:900px) { 
+  .product--small .thumbnail-list.slider--tablet-up li.thumbnail-list__item.slider__slide {
+    transform: rotate(-90deg);
+    width: calc(20% - .8rem);
+  }
+  .grid__item.product__media-wrapper slider-component.thumbnail-slider {
+    position: absolute;
+    top: 0;
+    transform: rotate(90deg);
+    width: 602px; /* manage width of small image */
+    left: 0;
+    transform-origin: left top;
+    height: 100px;
+    overflow: hidden;
+  }
+  .grid__item.product__media-wrapper {
+    position: relative;
+    padding-left: 100px;
+  }
+  .thumbnail-list.slider--tablet-up li.thumbnail-list__item.slider__slide {
+    transform: rotate(-90deg);
+    width: calc(16.8% - .8rem); /* decrease percentage and it will increase items */
+  }
+}

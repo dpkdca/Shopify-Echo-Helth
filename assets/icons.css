@@ -1,0 +1,100 @@
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  fill: currentColor;
+
+  @nest .no-svg & {
+    display: none;
+  }
+}
+
+svg,
+symbol {
+  &.icon {
+    & circle,
+    & ellipse,
+    & g,
+    & line,
+    & path,
+    & polygon,
+    & polyline,
+    & rect {
+      fill: inherit;
+      stroke: inherit;
+    }
+  }
+}
+
+/* Override the above for our stroke-only icons */
+svg {
+  &.icon-cart,
+  &.icon-bag,
+  &.icon-bag-minimal,
+  &.icon-search,
+  &.icon-close,
+  &.icon-chevron-down,
+  &.icon-email,
+  &.icon-user,
+  &.icon-hamburger,
+  &.icon-filter,
+  &.icon-globe,
+  &.icon-truck,
+  &.icon-package,
+  &.icon-circle-checkmark,
+  &.icon-leaf,
+  &.icon-lock,
+  &.icon-gift,
+  &.icon-ribbon,
+  &.icon-phone,
+  &.icon-heart,
+  &.icon-shield,
+  &.icon-tag,
+  &.icon-size-chart,
+  &.icon-tcwi-bills,
+  &.icon-tcwi-calendar,
+  &.icon-tcwi-cart,
+  &.icon-tcwi-charity,
+  &.icon-tcwi-gears,
+  &.icon-tcwi-gift,
+  &.icon-tcwi-globe,
+  &.icon-tcwi-open-envelope,
+  &.icon-tcwi-package,
+  &.icon-tcwi-plant,
+  &.icon-tcwi-recycle,
+  &.icon-tcwi-ribbon,
+  &.icon-tcwi-sales-tag,
+  &.icon-tcwi-shield,
+  &.icon-tcwi-stopwatch,
+  &.icon-tcwi-store,
+  &.icon-tcwi-thumbs-up,
+  &.icon-tcwi-trophy,
+  &.icon-tcwi-truck,
+  &.icon-tcwi-wallet,
+  &.icon-tcwi-chat,
+  &.icon-tcwi-phone {
+    & circle,
+    & ellipse,
+    & g,
+    & line,
+    & path,
+    & polygon,
+    & polyline,
+    & rect {
+      fill: none;
+      stroke-width: var(--iconWeight);
+      stroke: currentColor;
+      stroke-linecap: var(--iconLinecaps);
+      stroke-linejoin: var(--iconLinecaps);
+    }
+  }
+}
+
+svg.icon-cart circle {
+  fill: currentColor;
+}
+
+.icon__fallback-text {
+  @mixin visuallyHidden;
+}
